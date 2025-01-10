@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", serif;
+    padding: 10rem;
+}
+
+/* Main */
+
+.main {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    position: relative;
+}
+
+/* Payment details section */
+
+.payment--details {
+    width: 50%;
+    background: rgb(59,78,255);
+    background: linear-gradient(180deg, rgba(59,78,255,1) 0%, rgba(0,203,255,1) 100%); 
+    /* border: 1px solid red; */
+    padding: 2rem 3rem;
+}
+
+.payment--details img {
+    width: 50px;
+}
+
+div[title~="title"] {
+    display: flex;
+    gap: 1.5rem;
+    color: #fff;
+    margin-bottom: 2.5rem;
+}
+
+div[title~="title"] p{
+    font-weight: 500;
+    font-size: .9rem;
+}
+
+div[title~="title"] span{
+    font-weight: 300;
+    font-size: .9rem;
+}
+
+.total--amount {
+    margin-bottom: 2.5rem;
+    color: #fff;
+}
+
+.total--amount > p {
+    font-size: 1rem;
+}
+
+.total--amount::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    display: block;
+    background: rgba(167, 167, 167, 0.5);
+    margin-top: 2.5rem;
+}
+
+.total--amount > h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.product--cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.product {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(182, 182, 182, 0.5);
+    padding-bottom: 2.5rem;
+    color: #fff;
+}
+
+.product img {
+    width: 100px;
+    outline: #fff 2px solid;
+    border-radius: 20px;
+}
+
+.product .quantity {
+    width: fit-content;
+    background: rgba(255, 255, 255,0.2);
+    padding: 0 .5rem;
+    border-radius: 15px;
+}
+
+.details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card1 .description {
+    display: flex;
+    /* gap: 22rem; */
+    justify-content: space-between;
+}
+
+.card2 .description {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Card Details */
+.card--details {
+    padding: 4rem 3rem;
+    background-color: rgb(235, 237, 248);
+    position: absolute;
+    top: -68px;
+    left: 50%;
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    border: 2px solid transparent;
+    padding: 0.6rem 1rem;
+    background-color: #fff;
+    /* box-shadow: 0 0 2px rgba(0, 0, 0, 0.2); */
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.email:hover, 
+.card-number:hover {
+    /* border:none; */
+    border-bottom: 2px solid #67fff7;
+    border-radius: 10px 10px;
+    transition: border border-radius ease-in-out 0.5s;
+}
+
+.card-input-area .dates .expiry-date:hover,
+.card-input-area .dates .cvc:hover,
+.card-input-area .country {
+    border-bottom: 2px solid #67fff7;
+    transition: ease-in-out 0.2s;
+}
+
+.email > label {
+    font-weight: bold;
+}
+
+.email > input {
+    outline: none;
+    border: none;
+    font-family: "Poppins", serif;
+    font-size: 1rem;
+}
+
+.card {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 1em;
+    align-items: center;
+    background-color: #fff;
+    padding: 1.5rem 1rem;
+    color: #675dfd;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.card input:active {
+    border: none;
+    outline: none;
+}
+
+.card i:nth-child(1) {
+    background-color: #675dfd;
+    padding: .2em;
+    border-radius: 100%;
+    color: #fff;
+}
+
+.card i:nth-child(2) {
+    margin-left: .5em;
+    font-size: 1.5rem;
+}
+
+.card-input-area {
+    width: 100%;
+    background-color: #fff;
+    /* padding: 1rem; */
+}
+
+.card-input-area div {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 0.6rem 1rem;
+}
+
+.card-input-area input:focus {
+    border: none;
+    outline: none;
+}
+
+.card-input-area div label {
+    font-weight: 600;
+    /* font-size: 1rem; */
+}
+.card-input-area div input {
+    border: none;
+}
+
+input[type="text"] {
+    font-size: 1rem;
+}
+
+.card-input-area #card-number {
+    margin-bottom: 0.5em;
+}
+
+.card-number {
+    border-bottom: 1px solid #a5a5a5;
+}
+.card-input-area .dates {
+    display: flex;
+    /* border-top: 1px solid #a5a5a5; */
+    border-left: none;
+    border-right: none;
+}
+
+.card-input-area .dates .expiry-date{
+    border-right: 1px solid #a5a5a5;
+    border-bottom: 1px solid #a5a5a5;
+}
+
+.card-input-area .dates .cvc {
+    border-bottom: 1px solid #a5a5a5;
+}
+
+.card-input-area .cvc,
+.card-input-area .country {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-input-area .cvc-input, 
+.card-input-area .country-input {
+    padding: 0;
+
+}
+
+.card-input-area .cvc > img {
+    width: 30px;
+    height: 30px;
+}
+
+.card-input-area .country {
+    border-bottom: 1px solid  #a5a5a5;
+}
+
+.card-input-area .country > input { 
+    margin-bottom: 0.5em; 
+    font-size: 1rem;
+}
+
+.card-input-area .country > i {
+    color: gray;
+}
+
+.card-input-area .mode{
+    padding: 0;
+    font-weight: 400;
+}
+
+.card--details .mode .afterpay label, 
+.card--details .mode .klarna label {
+    font-weight: 400;
+    margin-left: -15px;
+}
+
+.card--details .mode .afterpay, 
+.card--details .mode .klarna {
+    padding: 1.2em 1.3rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    border-bottom: 1px solid #a5a5a5;
+}
+
+.card--details .mode .afterpay img, 
+.card--details .mode .klarna img {
+    width: 20px;
+    height: 20px;
+}
+
+
+.card--details .mode [type="radio"] {
+    transform: scale(1.5);
+}
+
+.card--details .more {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    padding: 1.2em 1.3em;
+    background-color: #fff;
+    margin-bottom: 2rem;
+}
+
+.card--details .more i {
+    font-size: 1.3rem;
+}
+
+.card--details .submit-btn button {
+    width: 100%;
+    padding: 1.2rem 2rem;
+    border: none;
+    color: #fff;
+    font-family: "Poppins", serif;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #675dfd;
+}
+
+.submit-btn button:hover {
+    background-color: #5236b0;
+    transition: 0.5s ease-in-out;
+}

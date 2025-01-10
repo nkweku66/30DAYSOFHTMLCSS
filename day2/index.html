@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>payment</title>
+</head>
+<body>
+    <section class="main">
+        <section class="payment--details">
+            <div title ="title">
+                <img src="/assets/logo.png" alt="logo">
+                <div class="text">
+                    <span>Subscribe to</span>
+                    <p>WebDevDailyAI Premium Plus</p>
+                </div>
+            </div>
+            <div class="total--amount">
+                <h2>$2,648.00</h2>
+                <p>Then $2,648.00 per month</p>
+            </div>
+            <div class="product--cards">
+                <div class="product card1">
+                    <img src="/assets/yellow-girl.webp" alt="anime girl">
+                    <div class="details">
+                        <div class="description">
+                            <h3>AI prompt tutorial</h3>
+                            <p>$1,980.00</p>
+                        </div>
+                        <div class="quantity">
+                            <span>Quantity</span>
+                            <span>2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product card2">
+                    <img src="/assets/midjourney.webp" alt="anime girl">
+                    <div class="details">
+                        <div class="description">
+                            <h3>Midjourney professional level courses</h3>
+                            <p>$668.00</p>
+                        </div>
+                        <div class="quantity">
+                            <span>Quantity</span>
+                            <span>1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="card--details">
+            <form action="POST" >
+                <div class="email">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email address" required>
+                </div>
+                <div class="card">
+                   <i class="fa-solid fa-check"></i>
+                   <i class="fa-regular fa-credit-card"></i>
+                   <span>Card</span>
+                </div>
+                <div class="card-input-area">
+                    <div class="card-number">
+                        <label for="card-number">Card Number</label>
+                        <input type="text" id="card-number" name="card-number" placeholder="1234 1234 1234 1234" required>
+                    </div>
+                    <section class="dates">
+                        <div class="expiry-date">
+                            <label for="expiry-date">Expiration</label>
+                            <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY">
+                        </div>
+                        <div class="cvc">
+                            <div class="cvc-input">
+                                <label for="cvc">CVC</label>
+                                <input type="text" id="cvc" name="cvc" placeholder="CVC" required>
+                            </div>
+                            <img src="/assets/secure.png" alt="secure">
+                        </div>
+                    </section>
+                    <div class="country">
+                        <div class="country-input">
+                            <label for="country">Country</label>
+                            <input type="text" id="country" name="country" placeholder="United States" required>
+                        </div>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="mode">
+                        <div class="afterpay">
+                            <input type="radio" name="afterpay" id="afterpay">
+                            <img src="/assets/afterpay.png" alt="">
+                            <label for="afterpay">Afterpay</label>
+                        </div>
+                        <div class="klarna">
+                            <input type="radio" name="klarna" id="klarna">
+                            <img src="/assets/klarna.png" alt="">
+                            <label for="afterpay">Klarna</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="more">
+                    <span>More</span>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+                <div class="submit-btn">
+                    <button type="submit">Done</button>
+                </div>
+            </form>
+        </section>
+    </section>
+</body>
+</html>
