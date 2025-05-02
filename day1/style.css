@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Bostvina Normal';
+    src: url('/fonts/Bostvina.eot');
+    src: local('Bostvina Normal'), local('Bostvina'),
+        url('/fonts/Bostvina.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Bostvina.woff2') format('woff2'),
+        url('/fonts/Bostvina.woff') format('woff'),
+        url('fonts/Bostvina.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --main-font: 'Bostvina Normal';
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    color: #fff;
+}
+
+.back--color{
+    background-color: black;
+    width: 500px;
+    height: 200px;
+}
+
+div h3{
+    font-family: var(--main-font);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.progress--card {
+    background-color: #277b64;
+    width: 300px;
+    padding: 1em;
+    border-radius: 10px;
+    text-align: left;
+
+}
+

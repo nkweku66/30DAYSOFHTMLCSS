@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Coffee Card</title>
+</head>
+<body>
+    <main>
+        <section class="hero">
+            <img src="./images/ice-coofee.jpg" alt="coffee" srcset="">
+            <div class="hero--icons">
+                <i class="fa-solid fa-arrow-left"></i>
+                <i class="fa-regular fa-bell"></i>
+            </div>
+        </section>
+        <section class="content">
+            <h2>Ice coffee</h2>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="info">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  Expedita porro consequuntur fuga neque et tenetur, perspiciatis esse illum! </p>
+            </div>
+        </section>
+        <section class="preference">
+            <div class="size">
+                <span>Cup size</span>
+                <div class="size--btn">
+                    <button type="button" class="btn small" id="small">S</button>
+                    <button type="button" class="btn medium" id="medium">M</button>
+                    <button type="button" class="btn large" id="large">L</button>
+                </div>
+            </div>
+            <div class="quanity">
+                <span>Amount</span>
+                <div class="amount--btn">
+                    <button type="button" id="btn-increase">+</button>
+                    <p id="count">1</p>
+                    <button type="button" id="btn-decrease">-</button>
+                </div>
+            </div>
+        </section>
+        <section class="CTA">
+            <div class="cost">
+                <span>Total price</span>
+                <h2 id="price">$0</h2>
+            </div>
+            <div class="order">
+                <button type="button">Order now</button>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    const addButton = document.querySelector('#btn-increase');
+    const subtractButton = document.querySelector('#btn-decrease');
+    const sizeButton = document.querySelectorAll('.btn');
+    const price = document.querySelector('#price');
+    
+    const prices = {
+        small: '8',
+        medium: '16',
+        large : '24'
+    }
+    
+    sizeButton.forEach(btn => btn.addEventListener('click', function() {
+        sizeButton.forEach(btn => btn.classList.remove('active'));
+        if (this.id === 'small'){
+            price.textContent = '$' + prices.small;
+            this.classList.add('active');
+        }
+        else if (this.id === 'medium'){
+            price.textContent = '$' + prices.medium;
+            this.classList.add('active');
+        }
+        else if (this.id === 'large'){
+            price.textContent = '$' + prices.large;
+            this.classList.add('active');
+        }
+    
+    }));
+
+    function btnIncrease() {
+        const count = document.querySelector('#count');
+        count.textContent = parseInt(count.textContent) + 1;
+        addButton.classList.add('active')
+        setTimeout(() => {
+            addButton.classList.remove('active')
+        }, 500);
+        
+        if (btn.classList.contains('small')){
+            price.textContent = '$' + (prices.small * parseInt(count.textContent));
+        }
+        else if (btn.classList.contains('small')){
+            price.textContent = '$' + (prices.medium * parseInt(count.textContent));
+        }
+        else {
+            price.textContent = '$' + (prices.large * parseInt(count.textContent));
+        }
+    
+        // price.textContent = '$' + (parseInt(prices.small) * count.textContent);
+    }
+    
+    function btnDecrease() {
+        const count = document.querySelector('#count');
+        if (count.textContent > 1) {
+            count.textContent = parseInt(count.textContent) - 1;
+        }
+        subtractButton.classList.add('active');
+        setTimeout(() => {
+            subtractButton.classList.remove('active')
+        }, 500);
+        
+        if (price.textContent != parseInt(prices.small)) {
+            price.textContent = '$' + (parseInt(price.textContent) - parseInt(prices.small));
+        }
+    }
+
+    addButton.addEventListener('click', btnIncrease);
+    subtractButton.addEventListener('click', btnDecrease);
+
+</script>
+</html>
