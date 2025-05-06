@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+button, input{ 
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+}
+
+.left{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding: 0 6em 0 3.5em;
+    color: #ffff;
+    background: url(./asset/images/cover.jpg) no-repeat center center;
+}
+.left h1{
+    font-size: 4rem;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    background-color: #ffff;
+    border-radius: 50%;
+}
+
+.details {
+    width: 50%;
+    height: 100vh;
+    padding: 4em 5em;
+    border: 1px solid red;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.details #act {
+    position: absolute;
+    left: 64%;
+    font-size: 1rem;
+}
+
+.details h2{
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.content {
+    /* border: 1px solid red; */
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.content .login-ways {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+}
+
+.login-ways button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    border: 1px solid #000;
+    border-radius: 40px;
+    padding: .8em;
+    background-color: transparent;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+}
+
+.login-ways button img{
+    width: 25px;
+}
+
+.login-ways button:hover{
+    background-color: #d3d3d3;
+    color: #ffff;
+}
+
+.mail--way {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 1em;
+}
+
+.mail, .password {
+    display: flex;
+    flex-direction: column;
+}
+
+.mail input, .password input{
+    padding: 1.1em;
+    border: 1px solid #a1a1a1;
+    border-radius: 15px;
+}
+
+label {
+    color: #464545;
+    margin-bottom: 5px;
+}
+
+.label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content a{
+    text-align: right;
+    color: #000;
+}
+
+.content #signin-btn{
+    border-radius: 100px;
+    border: none;
+    width: 300px;
+    padding: 1.4em;
+}
+
+.line {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    width: 60px;
+    text-align: center;
+    margin-top: -14px;
+    color: #636363;
+    background-color: #ffff;
+}
+
+hr {
+    display: block;
+    width: 100%;
+    height: 0.15em;
+    border: none;
+    border-radius: 30px;
+    background-color: #bdbdbd;
+}
+
+i {
+    margin-right: 5px;
+}
