@@ -1,0 +1,337 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    background: url(./assets/images/testing.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+
+.container{
+    width: 100%;
+    padding: 2em 3em;
+    border: .7em solid #fff;
+    border-radius: 4em;
+    position: relative;
+}
+
+.nav--bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+}
+
+.nav--bar .logo {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    color: #000;
+    /* border: 1px solid red; */
+}
+
+.nav--bar .logo img {
+    width: 30px;
+}
+
+.nav--bar ul{
+    display: flex;
+    gap: 2.5em;
+    color: #000;
+    position: relative;
+}
+
+.nav--bar ul li a{
+    color: #000;
+    font-size: 1.1rem;
+    width: 100%;
+    /* border: 1px solid red; */
+    position: relative;
+}
+
+.nav--bar ul li a:hover {
+    /* color: #0000005e; */
+}
+
+.nav--bar ul li a::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #f6f0a6;
+    /* border: 1px solid red; */
+    position: absolute;
+    left: -15px;
+    top: 30%;
+    border-radius: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+}
+
+.nav--bar ul li a:hover::before{
+    opacity: 100%;
+    visibility: visible;
+}
+
+.nav--bar button {
+    padding: 1em 2.5em;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 50px;
+    border: none;
+    background-color: #f6f0a6;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out, outline .3s ease-in-out;
+}
+
+.nav--bar button:hover{
+    background-color: transparent;
+    outline: 2px solid #f6f0a6;
+    color: #fff;
+}
+
+/* content */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+}
+
+main h1 {
+    font-size: 6.5rem;
+    font-weight: 500;
+    color: #000;
+    line-height: 1;
+}
+
+.main--content {
+    text-align: center;
+    width: 46%;
+    margin-top: 3em;
+}
+
+.main--content p {
+    margin-top: 30px;
+    color: #fffefe;
+    font-size: 1.2rem;
+    font-weight: 500;
+    /* width: 90%; */
+}
+
+main .chips {
+    /* border: 1px solid red; */
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    height: 170px;
+    /* margin-left: 200px; */
+    font-weight: 500;
+    
+}
+
+.chips span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    gap: 0.5em;
+    border: 1px solid #f6f0a6;
+    padding: 0.7em 2em;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+}
+
+.chips span:nth-child(1), .chips span:nth-child(3){
+    align-self: flex-end;
+    transition: transform .3s ease-in-out;
+}
+
+.chips span:nth-child(1) {
+    margin-left: 120px;
+    transition: transform .3s ease-in-out;
+}
+
+.chips span:nth-child(1):hover,
+.chips span:nth-child(2):hover,
+.chips span:nth-child(3):hover{
+    transform: scale(1.1);
+    /* width: 100%; */
+}
+
+.chips span:nth-child(2){
+    /* width: 50%; */
+    margin-left: 60px;
+    transition: transform .3s ease-in-out;
+}
+
+.chips span i {
+    color: #f6f0a6;
+}
+
+
+main h1 span{
+    color: #f6f0a6;
+}
+
+.check-in {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: #000;
+    /* gap: 2em; */
+    position: absolute;
+    left: 20%;
+    border-radius: 100px;
+    padding: 1em;
+}
+
+.check-in .check-in--details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    gap: 1em;
+    width: 100%;
+    /* padding: 0 .8em; */
+    border-left: 2px solid rgb(238, 237, 237);
+}
+
+.check-in .check-in--details:nth-child(1){
+    border-left: none;
+}
+
+.check-in .text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    justify-content: center;
+    align-items: normal;
+    font-weight: 500;
+}
+
+.check-in button {
+    width: 85%;
+    padding: 0.7em 0.1em;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 50px;
+    border: none;
+    background-color: #f6f0a6;
+    cursor: pointer;
+}
+
+.check-in .text p:nth-last-child(1){
+    color: #7a7a7a;
+}
+
+.check-in i {
+    padding: 0.5em;
+    background-color: #f0efef;
+    border-radius: 100%;
+    color: #a1a1a1;
+}
+
+/* main footer */
+
+.main--footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+
+.main--footer h2 {
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: right;
+    line-height: 1;
+}
+
+.main--footer .rating{
+    /* border: 1px solid  blue; */
+    position: relative;
+}
+
+.main--footer .rating i{
+    position: absolute;
+    left: 20px;
+    font-size: 1.5rem;
+    color: #f6f0a6;
+}
+
+.main--footer .rating span{
+    /* border: 1px solid yellow; */
+    /* width: 100%; */
+    text-align: left;
+    font-weight: 500;
+}
+
+.main--footer p {
+    width: 25%;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    color: #f6f0a6;
+}
+
+.cover--line {
+    padding: 0.3em;
+    border: 1px solid #f6f0a6;
+    border-radius: 50%;
+}
+
+.map {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.map img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    /* z-index: -1; */
+    transition: transform .3s ease-in-out;
+}
+
+.map img:hover{
+    transform: scale(1.2);
+}
+
+.cover--line .map i {
+    color: #f6f0a6;
+    /* border: 1px solid red; */
+    font-size: 1rem;
+    z-index: 1;
+}
