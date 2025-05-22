@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+button {
+    font-family: "Poppins", sans-serif;
+    padding: .4em 1em;
+    background: none;
+    border: 1px solid #000;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    position: relative;
+    padding: 2em 10em;
+}
+
+
+main h1 {
+    font-size: 4rem;
+    line-height: 1;
+}
+
+/* pages */
+/* home */
+
+/* .home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 700;
+    background: url(./assets/image/7.jpg);
+    background-size: cover;
+    color: #fff;
+} */
+/* tabs */
+.tabs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .8em;
+}
+
+/* gallery */
+.gallery {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    gap: 2em;
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+/* .gallery img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+} */
+
+/* general */
+.gallery .card--one, .card--two, .card--three {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+[class^="img--"] {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    /* border: 1px solid red; */
+}
+
+[class^="img--"] img{
+    transition: transform .3s ease-in-out;
+}
+
+[class^="img--"] img:hover{
+    transform: scale(1.1);
+}
+
+.card--one span, .card--one h3,
+.card--two span, .card--two h3,
+.card--three span, .card--three h3{
+    position: relative;
+    z-index: 1;
+}
+
+
+.rate {
+    padding: .2em .5rem;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+h3 {
+    color: #fff;
+    font-weight:600;
+    font-size: 1.5rem;
+    left: 34px;
+}
+
+.specific--location {
+    color: #fff;
+    left: 34px;
+}
+
+/* card one */
+.gallery .card--one {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.gallery .card--one img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    /* border: 1px solid red; */
+    border-radius: 20px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.img--one img:hover{
+    transform: scale(1.1);
+}
+
+.card--one span, .card--one h3{
+    position: relative;
+    z-index: 99;
+}
+
+.card--one .rate {
+    background-color: #fff;
+    padding: .2em .5rem;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    top: 30px;
+    left: 30px;
+}
+
+.card--one .img--one h3,
+.img--one .specific--location{
+    top: 220px;
+}
+
+.card--one .img--two h3,
+.card--one .img--two .specific--location{
+    top: 67%;
+}
+
+/* card two */
+.gallery .card--two {
+    width: 35%;
+    cursor: pointer;
+}
+
+.gallery .card--two img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: transform .3s ease-in-out;
+}
+
+.gallery .card--two img:hover{
+    transform: scale(1.1);
+}
+
+.card--two .rate {
+    background-color: #000;
+    color: #fff;
+    top: 30px;
+    left: 30px;
+    
+}
+
+.card--two h3, 
+.card--two .specific--location{
+    top: 600px;
+}
+
+/* card--three */
+.gallery .card--three {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+
+.gallery .card--three .small--cards {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 2em;
+}
+
+
+
+.gallery .card--three img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 20px;
+}
+
+
+.gallery .card--three .img--five{
+    width: 70%;
+}
+
+.card--three .rate {
+    background-color: #000;
+    color: #fff;
+    top: 30px;
+    left: 30px;
+}
+
+.card--three h3 {
+    top: 220px;
+}
+
+.card--three .specific--location {
+    top: 220px;
+    left: 34px;
+    color: #fff;
+}
